@@ -21,5 +21,7 @@ class SimpleAgent(Agent) :
 if __name__ == "__main__" :
     n = 5
     agents = [SimpleAgent(id = str(i), mark = str(n - 1)) for i in range(n)]
-    monitor = Monitor()
-    print("Time cost: %s" % monitor.run(agents = agents, timeout = 2))
+    monitor = ProcessMonitor()
+    print("Time cost [Process Monitor]: %s" % monitor.run(agents = agents, timeout = 2))
+    monitor = ThreadMonitor()
+    print("Time cost [Thread Monitor]: %s" % monitor.run(agents = agents, timeout = 2))
