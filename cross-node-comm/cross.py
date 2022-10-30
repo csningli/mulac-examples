@@ -26,4 +26,4 @@ if __name__ == "__main__" :
         CrossAgent(id = sys.argv[2], pub = None, sub = sys.argv[4]),
     ]
     monitor = ProcessMonitor(path = 'logs/%s.log' % get_datetime_stamp())
-    print("\nTime cost: %s" % monitor.run(agents = agents, timeout = 3))
+    print("Time cost: %s" % monitor.run(agents = agents, timeout = 3))
