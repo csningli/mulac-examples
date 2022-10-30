@@ -21,6 +21,11 @@ else
   conda activate $CONENV
 fi
 
+if [ ! -d "logs" ];
+then
+    mkdir logs
+fi
+
 export PYTHONPATH=$PYTHONPATH:`pwd`
 if [ $# -gt 0 ]
 then
